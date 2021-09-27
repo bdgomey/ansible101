@@ -3,6 +3,7 @@
 - name: configure hosts on /etc/hosts file
   hosts: localhost
   gather_facts: false
+  become: true
   tasks:
     - name: use line in file module to configure hosts on local machine
       lineinfile:

@@ -1,7 +1,12 @@
 ---
-- hosts: all
+- name: gather initial machine facts
+  hosts: servers
   become: yes
+  vars_files:
+    - ./vars.yaml
   tasks:
-    - debug:
-        var: ansible_facts["cmdline"] | type_debug
+    - name: update system
+      apt:
+        name: "*"
+        state: latest
 
