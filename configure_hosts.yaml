@@ -1,0 +1,19 @@
+---
+
+- name: configure hosts on /etc/hosts file
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: use line in file module to configure hosts on local machine
+      lineinfile:
+        path: /etc/hosts
+        line: "{{ item }}"
+      with_items:
+        - 10.10.10.100 server1
+        - 10.10.10.101 server2
+        - 127.0.3.1 control
+      register: output
+
+    - name: debug message
+      debug:
+        var: output
