@@ -1,0 +1,11 @@
+- name: ping module
+  hosts: servers
+  gather_facts: false
+  tasks:
+    - name: Example from an Ansible Playbook
+      ping:
+      register: output
+
+    - name: debug
+      debug:
+        var: output

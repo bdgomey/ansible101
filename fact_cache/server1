@@ -15,11 +15,11 @@
     "ansible_bios_version": "6.00",
     "ansible_board_asset_tag": "NA",
     "ansible_board_name": "440BX Desktop Reference Platform",
-    "ansible_board_serial": "None",
+    "ansible_board_serial": "NA",
     "ansible_board_vendor": "Intel Corporation",
     "ansible_board_version": "None",
     "ansible_chassis_asset_tag": "No Asset Tag",
-    "ansible_chassis_serial": "None",
+    "ansible_chassis_serial": "NA",
     "ansible_chassis_vendor": "No Enclosure",
     "ansible_chassis_version": "N/A",
     "ansible_cmdline": {
@@ -32,16 +32,16 @@
     "ansible_date_time": {
         "date": "2021-09-27",
         "day": "27",
-        "epoch": "1632739797",
-        "hour": "05",
-        "iso8601": "2021-09-27T10:49:57Z",
-        "iso8601_basic": "20210927T054957759722",
-        "iso8601_basic_short": "20210927T054957",
-        "iso8601_micro": "2021-09-27T10:49:57.759722Z",
-        "minute": "49",
+        "epoch": "1632752322",
+        "hour": "09",
+        "iso8601": "2021-09-27T14:18:42Z",
+        "iso8601_basic": "20210927T091842478688",
+        "iso8601_basic_short": "20210927T091842",
+        "iso8601_micro": "2021-09-27T14:18:42.478688Z",
+        "minute": "18",
         "month": "09",
-        "second": "57",
-        "time": "05:49:57",
+        "second": "42",
+        "time": "09:18:42",
         "tz": "CDT",
         "tz_dst": "CDT",
         "tz_offset": "-0500",
@@ -412,8 +412,8 @@
         }
     },
     "ansible_domain": "",
-    "ansible_effective_group_id": 0,
-    "ansible_effective_user_id": 0,
+    "ansible_effective_group_id": 1000,
+    "ansible_effective_user_id": 1000,
     "ansible_ens33": {
         "active": true,
         "device": "ens33",
@@ -506,19 +506,25 @@
         "type": "ether"
     },
     "ansible_env": {
-        "HOME": "/root",
+        "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+        "HOME": "/home/brian",
         "LANG": "en_US.UTF-8",
-        "LOGNAME": "root",
-        "MAIL": "/var/mail/root",
-        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin",
+        "LOGNAME": "brian",
+        "MOTD_SHOWN": "pam",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
         "PWD": "/home/brian",
         "SHELL": "/bin/bash",
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-lnxpsuablhgastemzfrvgqangmoggwlr ; /usr/bin/python3 /home/brian/.ansible/tmp/ansible-tmp-1632739796.3849576-42047-15761509515141/AnsiballZ_setup.py",
-        "SUDO_GID": "1000",
-        "SUDO_UID": "1000",
-        "SUDO_USER": "brian",
+        "SHLVL": "0",
+        "SSH_CLIENT": "10.10.10.50 52082 22",
+        "SSH_CONNECTION": "10.10.10.50 52082 10.10.10.100 22",
+        "SSH_TTY": "/dev/pts/0",
         "TERM": "xterm-256color",
-        "USER": "root"
+        "USER": "brian",
+        "XDG_RUNTIME_DIR": "/run/user/1000",
+        "XDG_SESSION_CLASS": "user",
+        "XDG_SESSION_ID": "28",
+        "XDG_SESSION_TYPE": "tty",
+        "_": "/bin/sh"
     },
     "ansible_fibre_channel_wwn": [],
     "ansible_fips": false,
@@ -527,8 +533,8 @@
     "ansible_hostname": "brian-virtual-machine",
     "ansible_hostnqn": "",
     "ansible_interfaces": [
-        "lo",
-        "ens33"
+        "ens33",
+        "lo"
     ],
     "ansible_is_chroot": false,
     "ansible_iscsi_iqn": "",
@@ -632,39 +638,39 @@
     },
     "ansible_machine": "x86_64",
     "ansible_machine_id": "947cdbf7ba5a4f28821183bf18208e45",
-    "ansible_memfree_mb": 1536,
+    "ansible_memfree_mb": 954,
     "ansible_memory_mb": {
         "nocache": {
-            "free": 2767,
-            "used": 1134
+            "free": 2618,
+            "used": 1283
         },
         "real": {
-            "free": 1536,
+            "free": 954,
             "total": 3901,
-            "used": 2365
+            "used": 2947
         },
         "swap": {
             "cached": 0,
-            "free": 1401,
+            "free": 1399,
             "total": 1401,
-            "used": 0
+            "used": 2
         }
     },
     "ansible_memtotal_mb": 3901,
     "ansible_mounts": [
         {
-            "block_available": 4876754,
+            "block_available": 4870577,
             "block_size": 4096,
             "block_total": 7578353,
-            "block_used": 2701599,
+            "block_used": 2707776,
             "device": "/dev/sda5",
             "fstype": "ext4",
-            "inode_available": 1700898,
+            "inode_available": 1695632,
             "inode_total": 1933312,
-            "inode_used": 232414,
+            "inode_used": 237680,
             "mount": "/",
             "options": "rw,relatime,errors=remount-ro",
-            "size_available": 19975184384,
+            "size_available": 19949883392,
             "size_total": 31040933888,
             "uuid": "59cc59bb-d113-4cb8-9198-55b5fe62da26"
         },
@@ -830,7 +836,7 @@
         },
         {
             "block_available": 0,
-            "block_size": 0,
+            "block_size": 512,
             "block_total": 0,
             "block_used": 0,
             "device": "/dev/fuse",
@@ -869,8 +875,8 @@
     "ansible_processor_threads_per_core": 1,
     "ansible_processor_vcpus": 2,
     "ansible_product_name": "VMware Virtual Platform",
-    "ansible_product_serial": "VMware-56 4d 22 95 9e 9d 32 cb-de 75 3c 72 c2 47 bb 9d",
-    "ansible_product_uuid": "95224d56-9d9e-cb32-de75-3c72c247bb9d",
+    "ansible_product_serial": "NA",
+    "ansible_product_uuid": "NA",
     "ansible_product_version": "None",
     "ansible_python": {
         "executable": "/usr/bin/python3",
@@ -892,8 +898,8 @@
         ]
     },
     "ansible_python_version": "3.8.10",
-    "ansible_real_group_id": 0,
-    "ansible_real_user_id": 0,
+    "ansible_real_group_id": 1000,
+    "ansible_real_user_id": 1000,
     "ansible_selinux": {
         "status": "disabled"
     },
@@ -905,19 +911,21 @@
     "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
     "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQC/7jJSt10xPjPCl3e+ldZZBW2QK6h+d9TBFxQkE2LRArLGnr5vVbZecJXkzc9rc2GgFSpv+a22fpXBQsnmFC4OrEFK7EvjmV4bunh2pwRfqBy6brdIEAOJ58qEQrUy+KHnH7lGdVjKJpjFdYg68NjMYsfmmxeCyi3oO61SM5WYZg9P2XsKVas7j4pZdzocPqhoP6sIvqwSk1CrugJHqVcZu2anoy52S9wsQIYLOwv4FqH7RcRk+xnVOWLf9wu/oqsoUP5pSfIDK3ENc2v0kkVdJK+Ja9v4P4Ap71H+Pd+hpU5alkTvBJdCqqEEpUkfWyYFgMQuIhIQ3GS7McBZTaD7FkLv2kquXPLctAcjCb83NZwL4yfr/qbULUn/zR/ecv6TwGOlmuwULw/iU3EDj2jgBReqtdtZIUwbvTO2rJSOd4gofbEifGc5I9gY+RuxspcKSPTXojQyXSR+Amiz7chVowFu3Dr7vIijOTKYWdjGhcgKtAM3g6opzhejpCrKoOM=",
     "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa",
-    "ansible_swapfree_mb": 1401,
+    "ansible_swapfree_mb": 1399,
     "ansible_swaptotal_mb": 1401,
     "ansible_system": "Linux",
-    "ansible_system_capabilities": [],
-    "ansible_system_capabilities_enforced": "False",
+    "ansible_system_capabilities": [
+        ""
+    ],
+    "ansible_system_capabilities_enforced": "True",
     "ansible_system_vendor": "VMware, Inc.",
-    "ansible_uptime_seconds": 2049,
-    "ansible_user_dir": "/root",
-    "ansible_user_gecos": "root",
-    "ansible_user_gid": 0,
-    "ansible_user_id": "root",
+    "ansible_uptime_seconds": 14575,
+    "ansible_user_dir": "/home/brian",
+    "ansible_user_gecos": "Brian,,,",
+    "ansible_user_gid": 1000,
+    "ansible_user_id": "brian",
     "ansible_user_shell": "/bin/bash",
-    "ansible_user_uid": 0,
+    "ansible_user_uid": 1000,
     "ansible_userspace_architecture": "x86_64",
     "ansible_userspace_bits": "64",
     "ansible_virtualization_role": "guest",
@@ -955,8 +963,7 @@
         },
         "board": {
             "manufacturer": "Intel Corporation",
-            "product": "440BX Desktop Reference Platform",
-            "serial_number": "None"
+            "product": "440BX Desktop Reference Platform"
         },
         "chassis": {
             "asset_tag": "No Asset Tag",
@@ -964,25 +971,21 @@
         },
         "manufacturer": "VMware, Inc.",
         "product": {
-            "name": "VMware Virtual Platform",
-            "serial_number": "VMware-56 4d 22 95 9e 9d 32 cb-de 75 3c 72 c2 47 bb 9d",
-            "uuid": "95224d56-9d9e-cb32-de75-3c72c247bb9d"
+            "name": "VMware Virtual Platform"
         }
     },
     "facter_facterversion": "3.14.19",
     "facter_filesystems": "ext2,ext3,ext4,iso9660,squashfs,vfat",
     "facter_fips_enabled": false,
     "facter_hypervisors": {
-        "vmware": {
-            "version": ""
-        }
+        "vmware": {}
     },
     "facter_identity": {
-        "gid": 0,
-        "group": "root",
-        "privileged": true,
-        "uid": 0,
-        "user": "root"
+        "gid": 1000,
+        "group": "brian",
+        "privileged": false,
+        "uid": 1000,
+        "user": "brian"
     },
     "facter_is_virtual": true,
     "facter_kernel": "Linux",
@@ -990,35 +993,35 @@
     "facter_kernelrelease": "5.11.0-36-generic",
     "facter_kernelversion": "5.11.0",
     "facter_load_averages": {
-        "15m": 0.05,
-        "1m": 0.0,
+        "15m": 0.0,
+        "1m": 0.04,
         "5m": 0.03
     },
     "facter_memory": {
         "swap": {
             "available": "1.37 GiB",
-            "available_bytes": 1469710336,
-            "capacity": "0%",
+            "available_bytes": 1467863040,
+            "capacity": "0.13%",
             "total": "1.37 GiB",
             "total_bytes": 1469710336,
-            "used": "0 bytes",
-            "used_bytes": 0
+            "used": "1.76 MiB",
+            "used_bytes": 1847296
         },
         "system": {
-            "available": "2.66 GiB",
-            "available_bytes": 2852909056,
-            "capacity": "30.26%",
+            "available": "2.51 GiB",
+            "available_bytes": 2699911168,
+            "capacity": "34.00%",
             "total": "3.81 GiB",
             "total_bytes": 4091035648,
-            "used": "1.15 GiB",
-            "used_bytes": 1238126592
+            "used": "1.30 GiB",
+            "used_bytes": 1391124480
         }
     },
     "facter_mountpoints": {
         "/": {
-            "available": "18.60 GiB",
-            "available_bytes": 19975184384,
-            "capacity": "32.15%",
+            "available": "18.58 GiB",
+            "available_bytes": 19949883392,
+            "capacity": "32.24%",
             "device": "/dev/sda5",
             "filesystem": "ext4",
             "options": [
@@ -1028,8 +1031,8 @@
             ],
             "size": "28.91 GiB",
             "size_bytes": 31040933888,
-            "used": "8.82 GiB",
-            "used_bytes": 9465360384
+            "used": "8.84 GiB",
+            "used_bytes": 9490661376
         },
         "/boot/efi": {
             "available": "510.98 MiB",
@@ -1171,7 +1174,7 @@
         },
         "/run": {
             "available": "388.54 MiB",
-            "available_bytes": 407408640,
+            "available_bytes": 407416832,
             "capacity": "0.41%",
             "device": "tmpfs",
             "filesystem": "tmpfs",
@@ -1187,8 +1190,8 @@
             ],
             "size": "390.15 MiB",
             "size_bytes": 409104384,
-            "used": "1.62 MiB",
-            "used_bytes": 1695744
+            "used": "1.61 MiB",
+            "used_bytes": 1687552
         },
         "/run/lock": {
             "available": "5.00 MiB",
@@ -1212,7 +1215,7 @@
         },
         "/run/snapd/ns": {
             "available": "388.54 MiB",
-            "available_bytes": 407408640,
+            "available_bytes": 407416832,
             "capacity": "0.41%",
             "device": "tmpfs",
             "filesystem": "tmpfs",
@@ -1228,8 +1231,8 @@
             ],
             "size": "390.15 MiB",
             "size_bytes": 409104384,
-            "used": "1.62 MiB",
-            "used_bytes": 1695744
+            "used": "1.61 MiB",
+            "used_bytes": 1687552
         },
         "/run/snapd/ns/snap-store.mnt": {
             "available": "0 bytes",
@@ -1246,8 +1249,8 @@
             "used_bytes": 0
         },
         "/run/user/1000": {
-            "available": "390.13 MiB",
-            "available_bytes": 409075712,
+            "available": "390.12 MiB",
+            "available_bytes": 409067520,
             "capacity": "0.01%",
             "device": "tmpfs",
             "filesystem": "tmpfs",
@@ -1264,8 +1267,8 @@
             ],
             "size": "390.15 MiB",
             "size_bytes": 409100288,
-            "used": "24.00 KiB",
-            "used_bytes": 24576
+            "used": "32.00 KiB",
+            "used_bytes": 32768
         },
         "/run/user/1000/doc": {
             "available": "0 bytes",
@@ -1562,82 +1565,68 @@
     "facter_partitions": {
         "/dev/loop0": {
             "backing_file": "/var/lib/snapd/snaps/bare_5.snap",
-            "filesystem": "squashfs",
             "mount": "/snap/bare/5",
             "size": "4.00 KiB",
             "size_bytes": 4096
         },
         "/dev/loop1": {
             "backing_file": "/var/lib/snapd/snaps/core18_2128.snap",
-            "filesystem": "squashfs",
             "mount": "/snap/core18/2128",
             "size": "55.44 MiB",
             "size_bytes": 58130432
         },
         "/dev/loop2": {
             "backing_file": "/var/lib/snapd/snaps/gtk-common-themes_1515.snap",
-            "filesystem": "squashfs",
             "mount": "/snap/gtk-common-themes/1515",
             "size": "65.10 MiB",
             "size_bytes": 68259840
         },
         "/dev/loop3": {
             "backing_file": "/var/lib/snapd/snaps/gtk-common-themes_1519.snap",
-            "filesystem": "squashfs",
             "mount": "/snap/gtk-common-themes/1519",
             "size": "65.21 MiB",
             "size_bytes": 68378624
         },
         "/dev/loop4": {
             "backing_file": "/var/lib/snapd/snaps/gnome-3-34-1804_72.snap",
-            "filesystem": "squashfs",
             "mount": "/snap/gnome-3-34-1804/72",
             "size": "219.00 MiB",
             "size_bytes": 229638144
         },
         "/dev/loop5": {
             "backing_file": "/var/lib/snapd/snaps/snap-store_547.snap",
-            "filesystem": "squashfs",
             "mount": "/snap/snap-store/547",
             "size": "50.96 MiB",
             "size_bytes": 53432320
         },
         "/dev/loop6": {
             "backing_file": "/var/lib/snapd/snaps/snapd_13170.snap",
-            "filesystem": "squashfs",
             "mount": "/snap/snapd/13170",
             "size": "32.31 MiB",
             "size_bytes": 33878016
         },
         "/dev/loop7": {
             "backing_file": "/var/lib/snapd/snaps/snapd_12883.snap",
-            "filesystem": "squashfs",
             "mount": "/snap/snapd/12883",
             "size": "32.30 MiB",
             "size_bytes": 33869824
         },
         "/dev/sda1": {
-            "filesystem": "vfat",
             "mount": "/boot/efi",
-            "partuuid": "d8113353-01",
             "size": "512.00 MiB",
-            "size_bytes": 536870912,
-            "uuid": "945A-7D88"
+            "size_bytes": 536870912
         },
         "/dev/sda2": {
             "size": "1.00 KiB",
             "size_bytes": 1024
         },
         "/dev/sda5": {
-            "filesystem": "ext4",
             "mount": "/",
-            "partuuid": "d8113353-05",
             "size": "29.50 GiB",
-            "size_bytes": 31672238080,
-            "uuid": "59cc59bb-d113-4cb8-9198-55b5fe62da26"
+            "size_bytes": 31672238080
         }
     },
-    "facter_path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/opt/puppetlabs/bin",
+    "facter_path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/puppetlabs/bin",
     "facter_processors": {
         "count": 2,
         "isa": "x86_64",
@@ -1681,9 +1670,9 @@
     },
     "facter_system_uptime": {
         "days": 0,
-        "hours": 0,
-        "seconds": 2050,
-        "uptime": "0:34 hours"
+        "hours": 4,
+        "seconds": 14576,
+        "uptime": "4:02 hours"
     },
     "facter_timezone": "CDT",
     "facter_virtual": "vmware",

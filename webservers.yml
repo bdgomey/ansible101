@@ -1,6 +1,7 @@
 # setup webservers
 ---
-- hosts: webservers
+- name: creating a webserver
+  hosts: webservers
   become: true
   vars_files:
     vars.yaml
@@ -24,8 +25,7 @@
       lineinfile:
         create: yes
         path: /var/www/html/index.html
-        line: <html> "Hello World" </html>
-
+        line: <h1> "Hello World !!" </h1>
 
     - name: start apache
       service: 
