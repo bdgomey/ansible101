@@ -1,6 +1,7 @@
 # setup webservers
 ---
-  - hosts: webservers
+  - name: using git to set  up webserver
+    hosts: webservers
     become: true
     vars_files:
       vars.yaml
@@ -10,7 +11,6 @@
         package: 
           name: "*" 
           state: latest
-
 
       - name: install apache webserver
         package: 
