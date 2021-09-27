@@ -1,0 +1,16 @@
+---
+- hosts: webservers
+  become: true
+  vars_files:
+    vars.yaml
+  tasks:
+
+    - name: install apache webserver
+      package: 
+        name: apache2 
+        state: present
+
+    - name: delete original index.html file
+      file: 
+        path: /var/www/html/index.html 
+        state: absent

@@ -3,7 +3,7 @@
   hosts: servers
   become: yes
   vars_files:
-    - ./vars.yaml
+    - vars.yaml
   tasks:
     - name: update system
       apt:

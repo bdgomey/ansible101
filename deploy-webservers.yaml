@@ -1,0 +1,5 @@
+# congregate playbooks
+---
+- import_playbook: update_packages.yaml
+- import_playbook: setup-apache.yaml
+- import_playbook: start-apache.yaml
