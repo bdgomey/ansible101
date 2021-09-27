@@ -32,6 +32,10 @@
           path: /var/www/github
           state: directory
 
+      - name: clean folder if it exists
+        command: rm -rf /var/www/github
+        ignore_errors: yes
+
       - name: download github repository
         git:
           repo: 'https://github.com/bdgomey/ansible101.git'
