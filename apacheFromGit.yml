@@ -16,11 +16,16 @@
         package: 
           name: apache2 
           state: present
+      
+      - name: install git
+        package:
+          name: git
+          state: present
 
       - name: delete original index.html file
         file: 
-        path: /var/www/html/index.html 
-        state: absent
+          path: /var/www/html/index.html 
+          state: absent
 
       - name: Create a directory for github to use
         file:
