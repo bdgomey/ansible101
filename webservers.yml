@@ -5,6 +5,9 @@
   become: true
   vars_files:
     vars.yaml
+  vars:
+    our_server_number: 3
+    motd: "{{ lookup('file', '/etc/motd') }}"
   tasks:
     - name: update all packages to the latest version
       package: 
@@ -25,8 +28,15 @@
       lineinfile:
         create: yes
         path: /var/www/html/index.html
-        line: <h1> "Hello World !!" </h1>
+        line: <h1tml> {{ "Hello World"|replace("World", "From") }} server 3 </html>
+      when: our_server_number == 3
 
+    - name: create new index.html file
+      lineinfile:
+        create: yes
+        path: /var/www/html/index.html
+        line: <h1tml> {{ "Hello World"|replace("Hello World", "From") }} server 5 </html>
+      when: our_server_number == 5
     - name: start apache
       service: 
         name: apache2 

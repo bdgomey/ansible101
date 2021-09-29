@@ -1,0 +1,8 @@
+- name: look up a file from a location
+  hosts: localhost
+  vars:
+    motd: "{{ lookup('file', '/etc/motd') }}"
+  
+  tasks:
+    - debug:
+        msg: "Here is your message of the day: {{ motd }}"
