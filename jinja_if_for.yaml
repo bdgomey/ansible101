@@ -5,20 +5,13 @@
   vars_files:
     vars.yaml
   vars:
-    addresses: [address1, address2, address3]
+    addresses: [address1, address2, address1, address2, address1, address2, address1, address2, address1, address2, address1, address2]
   tasks:
-    - name: update all packages to the latest version
-      package: 
-        name: "*" 
-        state: latest
-
-    - name: install apache webserver
-      package: 
-        name: apache2 
-        state: present
 
     - name: delete original index.html file
-      file: path=/var/www/html/index.html state=absent
+      file: 
+        path: /var/www/html/index.html 
+        state: absent
 
     - name: create new index.html file
       lineinfile:
@@ -34,7 +27,7 @@
                 {% endfor %}
                 </html>
               {% endif %}"
-              
+           
 
     - name: start apache
       service: 

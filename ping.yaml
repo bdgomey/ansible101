@@ -1,11 +1,16 @@
 - name: ping module
-  hosts: servers
+  hosts: localhost
   gather_facts: false
-  tasks:
-    - name: Example from an Ansible Playbook
-      ping:
-      register: output
 
-    - name: debug
+  tasks:
+
+    - name: print a loop
       debug:
-        var: output
+        msg: "I am looping the following items: {{ item.server1 }}"
+      with_dict: 
+        - server1: ansible 
+        - server2: ubuntu
+    
+    
+ 
+
