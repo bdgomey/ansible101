@@ -1,15 +1,11 @@
 - name: ping module
-  hosts: localhost
-  gather_facts: false
+  hosts: servers
+  gather_facts: true
 
   tasks:
 
-    - name: print a loop
-      debug:
-        msg: "I am looping the following items: {{ item.server1 }}"
-      with_dict: 
-        - server1: ansible 
-        - server2: ubuntu
+    - name: ping
+      ping:
     
     
  

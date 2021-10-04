@@ -6,3 +6,4 @@
     - name: use host variables to show information
       debug:
         msg: " the ip address of server2 is {{ hostvars['server2'].ansible_all_ipv4_addresses[0] }} and server1 ip address is {{ ansible_all_ipv4_addresses[0] }}"
+      tags: facts
