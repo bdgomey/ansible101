@@ -1,0 +1,9 @@
+--- 
+
+- hosts: webservers
+  become: true
+  vars_files:
+    vars.yaml
+  roles:
+    - set-up_apache    
+    - start_apache

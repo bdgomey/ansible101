@@ -13,16 +13,19 @@
       package: 
         name: "*" 
         state: latest
+      tags: update
 
     - name: install apache webserver
       package: 
         name: apache2 
         state: present
+      tags: apache
 
     - name: delete original index.html file
       file: 
         path: /var/www/html/index.html 
         state: absent
+      tags: apache
 
     - name: create new index.html file
       lineinfile:
@@ -30,14 +33,18 @@
         path: /var/www/html/index.html
         line: <h1tml> {{ "Hello World"|replace("World", "From") }} server 3 </html>
       when: our_server_number == 3
+      tags: apache
 
     - name: create new index.html file
       lineinfile:
         create: yes
         path: /var/www/html/index.html
         line: <h1tml> {{ "Hello World"|replace("Hello World", "From") }} server 5 </html>
+      tags: apache
+
       when: our_server_number == 5
     - name: start apache
       service: 
         name: apache2 
         state: started
+      tags: apache

@@ -1,0 +1,22 @@
+---
+# tasks file for set-up_apache
+
+
+- name: install apache webserver
+  package: 
+    name: apache2 
+    state: present
+
+
+- name: delete original index.html file
+  file: 
+    path: /var/www/html/index.html 
+    state: absent
+  diff: no
+  ignore_errors: yes
+  register: output
+
+
+- name: debug 
+  debug: 
+    var: output
