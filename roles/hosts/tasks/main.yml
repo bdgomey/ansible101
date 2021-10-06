@@ -1,0 +1,15 @@
+---
+# tasks file for hosts
+
+- name: use line in file module to configure hosts on local machine
+  lineinfile:
+    path: /etc/hosts
+    line: "{{ item }}"
+  loop:
+    - 192.168.145.128 kali
+
+  register: output
+
+- name: debug message
+  debug:
+    var: output

@@ -1,0 +1,49 @@
+---
+# tasks file for apachefromGit
+
+
+- name: update all packages to the latest version
+  package: 
+    name: "*" 
+    state: latest
+  tags: git
+
+- name: install apache webserver
+  package: 
+    name: apache2 
+    state: present
+  tags: git
+
+- name: install git
+  package:
+    name: git
+    state: present
+  tags: git
+
+- name: delete original index.html file
+  file: 
+    path: /var/www/html/index.html 
+    state: absent
+  tags: git
+
+- name: Create a directory for github to use
+  file:
+    path: /var/www/github
+    state: directory
+  tags: git
+
+- name: clean folder if it exists
+  command: rm -rf /var/www/github
+  ignore_errors: yes
+  tags: git
+
+- name: download github repository
+  git:
+    repo: 'https://github.com/bdgomey/ansible101.git'
+    dest: /var/www/github
+  tags: git
+
+- name: copy index.html into the /var/www/html folder
+  command: mv /var/www/github/index.html /var/www/html
+  notify: restart apache
+  tags: git

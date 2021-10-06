@@ -15,6 +15,7 @@
   diff: no
   ignore_errors: yes
   register: output
+  tags: apache
 
 
 - name: debug 

@@ -1,0 +1,7 @@
+---
+# tasks file for facts
+
+- name: use host variables to show information
+  debug:
+    msg: " the ip address of server2 is {{ hostvars['kali'].ansible_all_ipv4_addresses[0] }} "
+  tags: facts
