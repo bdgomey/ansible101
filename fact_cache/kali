@@ -1,8 +1,8 @@
 {
     "_ansible_facts_gathered": true,
     "ansible_all_ipv4_addresses": [
-        "192.168.145.128",
-        "172.17.0.1"
+        "172.17.0.1",
+        "192.168.145.128"
     ],
     "ansible_all_ipv6_addresses": [
         "fe80::20c:29ff:fed9:bf8f"
@@ -31,23 +31,23 @@
         "splash": true
     },
     "ansible_date_time": {
-        "date": "2021-10-06",
-        "day": "06",
-        "epoch": "1633530813",
-        "hour": "09",
-        "iso8601": "2021-10-06T14:33:33Z",
-        "iso8601_basic": "20211006T093333166967",
-        "iso8601_basic_short": "20211006T093333",
-        "iso8601_micro": "2021-10-06T14:33:33.166967Z",
-        "minute": "33",
+        "date": "2021-10-08",
+        "day": "08",
+        "epoch": "1633715288",
+        "hour": "12",
+        "iso8601": "2021-10-08T17:48:08Z",
+        "iso8601_basic": "20211008T124808212128",
+        "iso8601_basic_short": "20211008T124808",
+        "iso8601_micro": "2021-10-08T17:48:08.212128Z",
+        "minute": "48",
         "month": "10",
-        "second": "33",
-        "time": "09:33:33",
+        "second": "08",
+        "time": "12:48:08",
         "tz": "CDT",
         "tz_dst": "CDT",
         "tz_offset": "-0500",
-        "weekday": "Wednesday",
-        "weekday_number": "3",
+        "weekday": "Friday",
+        "weekday_number": "5",
         "weeknumber": "40",
         "year": "2021"
     },
@@ -259,7 +259,7 @@
             "vlan_challenged": "off [fixed]"
         },
         "hw_timestamp_filters": [],
-        "id": "8000.0242d3908040",
+        "id": "8000.02425337f265",
         "interfaces": [],
         "ipv4": {
             "address": "172.17.0.1",
@@ -267,7 +267,7 @@
             "netmask": "255.255.0.0",
             "network": "172.17.0.0"
         },
-        "macaddress": "02:42:d3:90:80:40",
+        "macaddress": "02:42:53:37:f2:65",
         "mtu": 1500,
         "promisc": false,
         "speed": -1,
@@ -286,7 +286,7 @@
         "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
         "PWD": "/home/bjgomes",
         "SHELL": "/usr/bin/zsh",
-        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-aswttgmkqxjlvntnvhtzcbgdeufkcrey ; /usr/bin/python /home/bjgomes/.ansible/tmp/ansible-tmp-1633530812.8651617-116948-129696127207023/AnsiballZ_setup.py",
+        "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-gbnazeurdvrglnagyhadrxnbbapqolcw ; /usr/bin/python /home/bjgomes/.ansible/tmp/ansible-tmp-1633715288.0621302-12178-260592516753645/AnsiballZ_setup.py",
         "SUDO_GID": "1000",
         "SUDO_UID": "1000",
         "SUDO_USER": "bjgomes",
@@ -495,16 +495,16 @@
     },
     "ansible_machine": "x86_64",
     "ansible_machine_id": "a60d0813c0b948c0992f01ffb5552f8d",
-    "ansible_memfree_mb": 9285,
+    "ansible_memfree_mb": 7077,
     "ansible_memory_mb": {
         "nocache": {
-            "free": 10253,
-            "used": 1819
+            "free": 8084,
+            "used": 3988
         },
         "real": {
-            "free": 9285,
+            "free": 7077,
             "total": 12072,
-            "used": 2787
+            "used": 4995
         },
         "swap": {
             "cached": 0,
@@ -516,18 +516,18 @@
     "ansible_memtotal_mb": 12072,
     "ansible_mounts": [
         {
-            "block_available": 52696294,
+            "block_available": 52690743,
             "block_size": 4096,
             "block_total": 63983231,
-            "block_used": 11286937,
+            "block_used": 11292488,
             "device": "/dev/sda1",
             "fstype": "ext4",
-            "inode_available": 15375669,
+            "inode_available": 15375035,
             "inode_total": 16326656,
-            "inode_used": 950987,
+            "inode_used": 951621,
             "mount": "/",
             "options": "rw,relatime,errors=remount-ro",
-            "size_available": 215844020224,
+            "size_available": 215821283328,
             "size_total": 262075314176,
             "uuid": "ef2c7bb8-368e-4822-94cd-84d934d770f6"
         }
@@ -616,7 +616,7 @@
     "ansible_system_capabilities": [],
     "ansible_system_capabilities_enforced": "False",
     "ansible_system_vendor": "VMware, Inc.",
-    "ansible_uptime_seconds": 2824,
+    "ansible_uptime_seconds": 335,
     "ansible_user_dir": "/root",
     "ansible_user_gecos": "root",
     "ansible_user_gid": 0,

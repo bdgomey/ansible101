@@ -1,0 +1,13 @@
+---
+# tasks file for curl
+
+
+- name: Check that you can connect (GET) to a page and it returns a status 200
+  uri:
+    url: http://192.168.145.128:80
+    return_content: yes
+  register: output
+
+- name: curl message from webserver
+  debug:
+    msg: "the server at {{ output.url }}, returned status code {{ output.status }} with content {{ output.content }}"

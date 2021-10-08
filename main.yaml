@@ -5,9 +5,10 @@
   become: true
   roles:
 #    - hosts    
-    - facts
-    - set-up_apache    
-    - start_apache
+#    - facts
+#    - set-up_apache    
+#    - start_apache
     - apachefromGit
-    - jinja
-    - registered_variables
+#   - jinja
+#    - registered_variables
+    - curl
