@@ -34,7 +34,7 @@
 
 - name: clean folder if it exists
   file: 
-    src: /var/www/html/index.html
+    path: /var/www/html/index.html
     state: absent
   ignore_errors: yes
   tags: git
