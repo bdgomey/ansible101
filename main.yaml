@@ -1,7 +1,7 @@
 --- 
 
 - hosts: kali
-  gather_facts: true
+  gather_facts: false
   become: true
   roles:
 #    - hosts    
