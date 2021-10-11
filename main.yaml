@@ -1,6 +1,6 @@
 --- 
 
-- hosts: webservers
+- hosts: linux
   gather_facts: true
   become: true
   roles:
