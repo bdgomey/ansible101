@@ -1,6 +1,5 @@
 --- 
-
-- hosts: kali
+- hosts: all
   gather_facts: true
   become: true
   vars_files:
@@ -13,4 +12,6 @@
     - apachefromGit
 #   - jinja
 #    - registered_variables
-    - curl
+#    - curl
+
+
