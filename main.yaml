@@ -1,7 +1,7 @@
 --- 
 
 - hosts: kali
-  gather_facts: false
+  gather_facts: true
   become: true
   vars_files:
     vault.yaml
