@@ -1,0 +1,18 @@
+- hosts: localhost
+  gather_facts: true
+  become: true
+  vars_files:
+    vault.yaml
+  tasks:
+    - name: loops
+      shell: |
+        echo { items } 
+      with_items:
+        - test1.txt
+        - test2.txt
+        - test3.txt
+      register: output
+
+    - name: debug
+      debug:
+        var: output
