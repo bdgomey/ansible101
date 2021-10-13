@@ -4,7 +4,7 @@
 
 - name: Check that you can connect (GET) to a page and it returns a status 200
   uri:
-    url: http://192.168.145.128:80
+    url: http://192.168.145.100:80
     return_content: yes
   register: output
 
