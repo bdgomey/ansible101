@@ -3,6 +3,8 @@
 - hosts: kali
   gather_facts: false
   become: true
+  vars_files:
+    vault.yaml
   roles:
 #    - hosts    
 #    - facts
