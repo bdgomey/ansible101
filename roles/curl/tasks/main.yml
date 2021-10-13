@@ -1,6 +1,9 @@
 ---
 # tasks file for curl
 
+- name: Sleep for 5 seconds and continue with play
+  wait_for:
+    timeout: 5
 
 - name: Check that you can connect (GET) to a page and it returns a status 200
   uri:

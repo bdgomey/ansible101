@@ -10,7 +10,7 @@
 #    - facts
 #    - set-up_apache    
 #    - start_apache
-#    - apachefromGit
+    - apachefromGit
 #   - jinja
 #    - registered_variables
     - curl
